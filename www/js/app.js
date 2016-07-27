@@ -27,7 +27,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 					templateUrl: 'templates/home-1.html'
 				}
 			},
-			hideTabs: true
+			// hideTabs: true
 		})
 		.state('app.tabs.home-2', {
 			url: '/home-2',
@@ -36,7 +36,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 					templateUrl: 'templates/home-2.html'
 				}
 			},
-			hideTabs: true
+			// hideTabs: true
 		})
 
 		.state('app.tabs.settings', {
@@ -54,7 +54,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 					templateUrl: 'templates/settings-1.html'
 				}
 			},
-			hideTabs: true
+			// hideTabs: true
 		})
 		.state('app.tabs.settings-2', {
 			url: '/settings-2',
@@ -63,7 +63,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 					templateUrl: 'templates/settings-2.html'
 				}
 			},
-			hideTabs: true
+			// hideTabs: true
 		})
 
 		.state('app.login', {
