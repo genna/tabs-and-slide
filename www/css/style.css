@@ -1,1 +1,11 @@
-/* Empty. Add your own CSS if you like */
+.tabs {
+	-webkit-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+}
+
+.tabs-item-hide > .tabs{
+	-webkit-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	bottom: -49px;
+	display: flex;
+}
