@@ -24,9 +24,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			url: '/home-1',
 			views: {
 				'home-tab': {
-					templateUrl: 'templates/home-1.html'
+					templateUrl: 'templates/home-1.html',
+					controller: 'Home1Controller as vm'
 				}
-			},
+			}
 			// hideTabs: true
 		})
 		.state('app.tabs.home-2', {
