@@ -1,4 +1,4 @@
-var app = angular.module('starter', ['ionic']);
+var app = angular.module('starter', ['ionic', 'IonicModalNav']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 	$stateProvider
@@ -24,16 +24,41 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			url: '/home-1',
 			views: {
 				'home-tab': {
-					templateUrl: 'templates/home-1.html'
+					templateUrl: 'templates/home-1.html',
+					controller: 'Home1Controller as vm'
 				}
 			},
 			// hideTabs: true
+		})
+		.state('modal-1', {
+			views: {
+				'ionic-modal-nav@': {
+					templateUrl: 'templates/modal-1.html',
+					controller: 'Modal1Controller as vm'
+				}
+			}
+		})
+		.state('modal-2', {
+			views: {
+				'ionic-modal-nav@': {
+					templateUrl: 'templates/modal-2.html',
+					controller: 'Modal2Controller as vm'
+				}
+			}
+		})
+		.state('modal-3', {
+			views: {
+				'ionic-modal-nav@': {
+					templateUrl: 'templates/modal-3.html',
+					controller: 'Modal3Controller as vm'
+				}
+			}
 		})
 		.state('app.tabs.home-2', {
 			url: '/home-2',
 			views: {
 				'home-tab': {
-					templateUrl: 'templates/home-2.html'
+					templateUrl: 'templates/home-1.html'
 				}
 			},
 			// hideTabs: true
