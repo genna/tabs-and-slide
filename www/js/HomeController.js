@@ -14,6 +14,12 @@
 			openModal1: openModal1
 		});
 
+		(function initialize(){
+			IonicModalNavService.onClose(function(value){
+				alert('Transaction: ' + value);
+			});
+		})();
+
 		//*********************************************
 
 		function openModal1() {

@@ -16,9 +16,9 @@
 		});
 
 		//*********************************************
-		
-		function closeModal1() {
-			IonicModalNavService.hide()
+
+		function closeModal1() {		
+			IonicModalNavService.hide('canceled')
 		}
 
 		function openModal2() {

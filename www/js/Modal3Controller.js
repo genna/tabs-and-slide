@@ -22,7 +22,7 @@
 		}
 
 		function closeModal3() {
-			IonicModalNavService.hide()
+			IonicModalNavService.hide('finished')
 		}
 	}
 })();
