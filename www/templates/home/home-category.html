@@ -1,0 +1,9 @@
+<ion-view title="Category {{category}}">
+	<ion-content padding="true">
+		<ion-list>
+			<div class="item item-text-wrap" ng-click="go(item)" ng-repeat="item in items">
+				{{item.id}}. {{item.name}}
+			</div>
+		</ion-list>
+	</ion-content>
+</ion-view>

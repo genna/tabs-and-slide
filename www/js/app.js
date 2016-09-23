@@ -7,88 +7,171 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			abstract: true,
 			templateUrl: 'templates/menu.html'
 		})
-
-		.state('app.tabs', {
-			url: '/tab',
-			templateUrl: 'templates/tabs.html'
+		.state('app.program-tabs', {
+			url: '/program-tabs',
+			abstract: true,
+			templateUrl: 'templates/program/program-tabs.html'
 		})
-		.state('app.tabs.home', {
-			url: '/home',
+
+		//home
+		.state('app.home-tabs', {
+			url: '/home-tabs',
+			abstract: true,
+			templateUrl: 'templates/home/home-tabs.html'
+		})
+		.state('app.home-tabs.home-category-1', {
+			url: '/home-category-1',
 			views: {
-				'home-tab': {
-					templateUrl: 'templates/home.html'
+				'category-1-tab': {
+					templateUrl: 'templates/home/home-category.html',
+					controller: 'categoryController'
 				}
 			}
 		})
-		.state('app.tabs.home-1', {
-			url: '/home-1',
+		.state('app.home-tabs.home-category-2', {
+			url: '/home-category-2',
 			views: {
-				'home-tab': {
-					templateUrl: 'templates/home-1.html'
+				'category-2-tab': {
+					templateUrl: 'templates/home/home-category.html',
+					controller: 'categoryController'
 				}
 			},
-			// hideTabs: true
 		})
-		.state('app.tabs.home-2', {
-			url: '/home-2',
+		.state('app.home-tabs.home-category-3', {
+			url: '/home-category-3',
 			views: {
-				'home-tab': {
-					templateUrl: 'templates/home-2.html'
+				'category-3-tab': {
+					templateUrl: 'templates/home/home-category.html',
+					controller: 'categoryController'
 				}
 			},
-			// hideTabs: true
 		})
 
-		.state('app.tabs.settings', {
-			url: '/settings',
+		.state('app.home-details-tabs', {
+			url: '/home-details-tabs/:category/:movie',
+			abstract: true,
+			templateUrl: 'templates/home/home-details-tabs.html',
+			controller: 'detailTabsController'
+		})
+		.state('app.home-details-tabs.home-info', {
+			url: '/home-details-info',
 			views: {
-				'settings-tab': {
-					templateUrl: 'templates/settings.html'
+				'details-info-tab': {
+					templateUrl: 'templates/home/home-info.html',
+					controller: 'infoController'
 				}
 			}
 		})
-		.state('app.tabs.settings-1', {
-			url: '/settings-1',
+		.state('app.home-details-tabs.home-hours', {
+			url: '/home-details-hours',
 			views: {
-				'settings-tab': {
-					templateUrl: 'templates/settings-1.html'
+				'details-hours-tab': {
+					templateUrl: 'templates/home/home-hours.html',
+					controller: 'hoursController'
 				}
-			},
-			// hideTabs: true
+			}
 		})
-		.state('app.tabs.settings-2', {
-			url: '/settings-2',
+
+		//**********************************************
+		//program
+		//**********************************************
+		.state('app.program-tabs.program-category-1', {
+			url: '/program-category-1',
 			views: {
-				'settings-tab': {
-					templateUrl: 'templates/settings-2.html'
+				'category-1-tab': {
+					templateUrl: 'templates/program/program-category-1.html'
 				}
-			},
-			// hideTabs: true
+			}
+		})
+		.state('app.program-details-tabs.program-category-1-1', {
+			url: '/program-details-1-1',
+			views: {
+				'details-1-tab': {
+					templateUrl: 'templates/program/program-details-1-1.html',
+					controller: 'controller'
+				}
+			}
+		})
+		.state('app.program-details-tabs.program-category-1-2', {
+			url: '/program-details-1-2',
+			views: {
+				'details-2-tab': {
+					templateUrl: 'templates/program/program-details-1-2.html',
+					controller: 'controller'
+				}
+			}
+		})
+		.state('app.program-tabs.program-category-2', {
+			url: '/program-category-2',
+			views: {
+				'category-2-tab': {
+					templateUrl: 'templates/program/program-category-2.html'
+				}
+			}
+		})
+		.state('app.program-details-tabs.program-category-2-1', {
+			url: '/program-details-2-1',
+			views: {
+				'details-2-tab': {
+					templateUrl: 'templates/program/program-details-1-1.html',
+					controller: 'controller'
+				}
+			}
+		})
+		.state('app.program-details-tabs.program-category-2-2', {
+			url: '/program-details-2-2',
+			views: {
+				'details-2-tab': {
+					templateUrl: 'templates/program/program-details-1-2.html',
+					controller: 'controller'
+				}
+			}
+		})
+		.state('app.program-tabs.program-category-3', {
+			url: '/program-category-3',
+			views: {
+				'category-3-tab': {
+					templateUrl: 'templates/program/program-category-3.html'
+				}
+			}
+		})
+		.state('app.program-details-tabs.program-category-3-1', {
+			url: '/program-details-3-1',
+			views: {
+				'details-2-tab': {
+					templateUrl: 'templates/program/program-details-1-1.html',
+					controller: 'controller'
+				}
+			}
+		})
+		.state('app.program-details-tabs.program-category-3-2', {
+			url: '/program-details-3-2',
+			views: {
+				'details-2-tab': {
+					templateUrl: 'templates/program/program-details-1-2.html',
+					controller: 'controller'
+				}
+			}
+		})
+		//**********************************************
+		//news
+		//**********************************************
+		.state('app.articles', {
+			url: '/articles',
+			templateUrl: 'templates/news/articles.html'
+		})
+		.state('app.article', {
+			url: '/article',
+			templateUrl: 'templates/news/article.html'
 		})
 
-		.state('app.login', {
-			url: '/login',
-			templateUrl: 'templates/login.html'
+		//**********************************************
+		//information
+		//**********************************************
+		.state('app.info', {
+			url: '/info',
+			templateUrl: 'templates/information/info.html'
 		})
 
-		.state('app.flow', {
-			url: '/flow',
-			templateUrl: 'templates/flow-start.html'
-		})
-		.state('app.flow-first-child', {
-			url: '/flow-first-child',
-			templateUrl: 'templates/flow-first-child.html'
-		})
-		.state('app.flow-second-child', {
-			url: '/flow-second-child',
-			templateUrl: 'templates/flow-second-child.html'
-		});
-
-	$urlRouterProvider.otherwise('/app/login');
-});
-
-app.run(function($rootScope) {
-	$rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
-		$rootScope.hideTabs = !!toState.hideTabs;
-	});
+	$urlRouterProvider.otherwise('/app/home-tabs/home-category-1');
 });
